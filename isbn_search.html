@@ -77,20 +77,22 @@
           const Title = document.getElementById("title").value;
           const Publisher = document.getElementById("publisher").value;
           const Author = document.getElementById("author").value;
+          const series = document.getElementById("series").value;
+          const volume = document.getElementById("volume").value;
           const Pubdate = document.getElementById("pubdate").value;
-          const Page = document.getElementById("volume").value;
           const Cover = document.getElementById("cover").value;
           const Description = document.getElementById("description").value;
                                                                    
           //空だったらデータなしを入れる
           if (Title == ""){const Title = "データなし";}
           if (Publisher == ""){const Publisher = "データなし";}
-          if (Author == ""){const Author = "データなし";}                                     
+          if (Author == ""){const Author = "データなし";} 
+          if (series == ""){const series = "データなし";} 
+          if (volume == ""){const series = "データなし";} 
           if (Pubdate == ""){const Pubdate = "データなし";}
-          if (Page == ""){const Page = "0";}
           if (Cover == ""){const Cover = "データなし";}
                                               
-          const CopyPaste = Title + "\n" + Publisher + "\n" + Author + "\n" + Pubdate + "\n" + Cover + "\n" + Description;
+          const CopyPaste = Title + "\n" + Publisher + "\n" + Author + "\n" + series + "\n" + volume + "\n" + Pubdate + "\n" + Cover;
           document.getElementById("CopyPaste").value = CopyPaste;
 
             // コピー対象をJavaScript上で変数として定義する
