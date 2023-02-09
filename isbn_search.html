@@ -86,15 +86,15 @@
           if (Title == ""){const Title = "データなし";}
           if (Publisher == ""){const Publisher = "データなし";}
           if (Author == ""){const Author = "データなし";}                                     
-          if (Pubdate == ""){var Pubdate = "データなし";}
-          if (Page == ""){var Page = "0";}
-          if (Cover == ""){var Cover = "データなし";}
+          if (Pubdate == ""){const Pubdate = "データなし";}
+          if (Page == ""){const Page = "0";}
+          if (Cover == ""){const Cover = "データなし";}
                                               
-          var CopyPaste = Title + "\n" + Publisher + "\n" + Author + "\n" + Pubdate + "\n" + Cover + "\n" + Description;
+          const CopyPaste = Title + "\n" + Publisher + "\n" + Author + "\n" + Pubdate + "\n" + Cover + "\n" + Description;
           document.getElementById("CopyPaste").value = CopyPaste;
 
             // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("CopyPaste");
+            const copyTarget = document.getElementById("CopyPaste");
 
             // コピー対象のテキストを選択する
             copyTarget.select();
