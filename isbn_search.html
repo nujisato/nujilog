@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./Skeleton-2.0.4/css/skeleton.css">
     <link rel="apple-touch-icon" href="img/homeicon.png" sizes="180x180">
-    <title>書誌情報取得サンプル</title>
+    <title>ぬじろぐgithub - 書誌情報取得サンプル</title>
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -48,14 +48,6 @@
                 e.preventDefault();
                 const isbn = $("#isbn").val();
                 const url = "https://api.openbd.jp/v1/get?isbn=" + isbn;
-                //初期データ                                                
-                const Title = "データなし";
-                const Publisher = "データなし";
-                const Author = "データなし";
-                const Pubdate = "データなし";
-                const Page = "データなし";
-                const Cover = "データなし";
-                const Description = "データなし";
                                            
                 $.getJSON( url, function( data ) {
                     if( data[0] == null ) {
@@ -83,11 +75,17 @@
           alert("まとめるよ！");
           //フォームから情報を取得する
           var Title = document.getElementById("title").value;
+              if (Title = ""){var Title = "データなし";}
           var Publisher = document.getElementById("publisher").value;
+              if (Publisher = ""){var Publisher = "データなし";}
           var Author = document.getElementById("author").value;
+              if (Author = ""){var Author = "データなし";}
           var Pubdate = document.getElementById("pubdate").value;
+              if (Pubdate =""){var Pubdate = "データなし";}
           var Page = document.getElementById("volume").value;
+             if (Page = ""){var Page = "0";}
           var Cover = document.getElementById("cover").value;
+             if (Cover =""){var Cover = "データなし";}
           var Description = document.getElementById("description").value;
           
           var CopyPaste = Title + "\n" + Publisher + "\n" + Author + "\n" + Pubdate + "\n" + Cover + "\n" + Description;
