@@ -48,7 +48,15 @@
                 e.preventDefault();
                 const isbn = $("#isbn").val();
                 const url = "https://api.openbd.jp/v1/get?isbn=" + isbn;
-
+                //初期データ                                                
+                const Title = "データなし";
+                const Publisher = "データなし";
+                const Author = "データなし";
+                const Pubdate = "データなし";
+                const Page = "データなし";
+                const Cover = "データなし";
+                const Description = "データなし";
+                                           
                 $.getJSON( url, function( data ) {
                     if( data[0] == null ) {
                         alert("データが見つかりません");
