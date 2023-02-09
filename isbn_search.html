@@ -74,20 +74,22 @@
       function copyToClipboard() {
           alert("まとめるよ！");
           //フォームから情報を取得する
-          var Title = document.getElementById("title").value;
-              if (Title = ""){var Title = "データなし";}
-          var Publisher = document.getElementById("publisher").value;
-              if (Publisher = ""){var Publisher = "データなし";}
-          var Author = document.getElementById("author").value;
-              if (Author = ""){var Author = "データなし";}
-          var Pubdate = document.getElementById("pubdate").value;
-              if (Pubdate =""){var Pubdate = "データなし";}
-          var Page = document.getElementById("volume").value;
-             if (Page = ""){var Page = "0";}
-          var Cover = document.getElementById("cover").value;
-             if (Cover =""){var Cover = "データなし";}
-          var Description = document.getElementById("description").value;
-          
+          const Title = document.getElementById("title").value;
+          const Publisher = document.getElementById("publisher").value;
+          const Author = document.getElementById("author").value;
+          const Pubdate = document.getElementById("pubdate").value;
+          const Page = document.getElementById("volume").value;
+          const Cover = document.getElementById("cover").value;
+          const Description = document.getElementById("description").value;
+                                                                   
+          //空だったらデータなしを入れる
+          if (Title == ""){const Title = "データなし";}
+          if (Publisher == ""){const Publisher = "データなし";}
+          if (Author == ""){const Author = "データなし";}                                     
+          if (Pubdate == ""){var Pubdate = "データなし";}
+          if (Page == ""){var Page = "0";}
+          if (Cover == ""){var Cover = "データなし";}
+                                              
           var CopyPaste = Title + "\n" + Publisher + "\n" + Author + "\n" + Pubdate + "\n" + Cover + "\n" + Description;
           document.getElementById("CopyPaste").value = CopyPaste;
 
