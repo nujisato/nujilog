@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+  <p><img src="" id="bookImg"></p> <!--サムネイル ショートカットで使う場合は削除-->
+ <p><span id="booktitle"></span></p>
+  <p><span id="publisher"></span></p>
+  <p><span id="author"></span></p>
+  <p><span id="series"></span></p>
+  <p><span id="volume"></span></p>
+  <p><span id="pubdate"></span></p>
+  <p><span id="pageCount"></span></p>
+  <p><span id="bookImgSrc"></span></p>
+<script>
+//ページを開くたびにISBNコードから書籍情報を取得する
+//iOS ショートカットで使用する場合はisbnの値を変数に置き換えます
+
+ window.onload = function getBookData() {
+const isbn = "9784788517974" //ISBNコード
+alert(isbn);
+const url = "https://api.openbd.jp/v1/get?isbn=" + isbn;
+// json
+fetch(url).then(
+  response => {
+    return response.json();
+  }).then(data => {
+for (let i = 0; i < data.length; i++) {
+  // サムネイル
+  
+  const bookImgSrc = data[0].summary.cover;
+  
+  //書籍名
+  document.getElementById('booktitle').innerHTML = data[0].summary.title;
+  if(document.getElementById('booktitle').innerHTML==""){
+  document.getElementById('booktitle').innerHTML = "データなし";
+  }
+  
+  //出版社
+  document.getElementById('publisher').innerHTML = data[0].summary.publisher;
+  if(document.getElementById('publisher').innerHTML==""){
+  document.getElementById('publisher').innerHTML = "データなし";
+  }
+  
+  //巻
+  document.getElementById('volume').innerHTML = data[0].summary.volume;
+  if(document.getElementById('volume').innerHTML==""){
+  document.getElementById('volume').innerHTML = "0";
+  }
+  //シリーズ
+  document.getElementById('series').innerHTML = data[0].summary.series;
+    if(document.getElementById('series').innerHTML==""){
+  document.getElementById('series').innerHTML = "データなし";
+  }
+  //作者
+  document.getElementById('author').innerHTML = data[0].summary.author;
+  if(document.getElementById('author').innerHTML==""){
+  document.getElementById('author').innerHTML = "データなし";
+  }
+  
+  //出版日
+  document.getElementById('pubdate').innerHTML = data[0].summary.pubdate;
+  if(document.getElementById('pubdate').innerHTML==""){
+  document.getElementById('pubdate').innerHTML = "データなし";
+  }
+  
+  //ページ
+  document.getElementById('pageCount').innerHTML = data[0].summary.pageCount;
+  if(document.getElementById('pageCount').innerHTML=="undefined"){
+  document.getElementById('pageCount').innerHTML = "0";
+  }
+
+  //画像
+  document.getElementById('bookImgSrc').innerHTML = data[0].summary.cover;
+    if(document.getElementById('pubdate').innerHTML==""){
+    document.getElementById('bookImgSrc').innerHTML = "https://via.placeholder.com/128x192.png?text=No+Image";
+  }
+  
+  document.getElementById('bookImg').url = data[0].summary.cover;
+  document.getElementById('bookImg').src= bookImgSrc;
+}
+// 情報エリアの表示
+
+}).catch(err => {
+  console.log('Error: ' + err)
+})
+
+};
+</script>
+
+
+  </body>
+</html>
