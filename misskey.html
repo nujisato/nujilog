@@ -56,7 +56,8 @@
     
     //クリップボードにコピー
     function TextCopy(){
-    
+    var nyanpu = document.getElementById("mytextarea").value; //インプットテキスト
+    navigator.clipboard.writeText(nyanpu);
     }
 </script>
   
@@ -68,7 +69,7 @@ fn系（回転）同士はネストできません。</p>
 
 	<label>入力</label><br>
 	<textarea id="mytextarea" cols="40" rows="5"></textarea><br>
-	<input type="button" id="TextEffect" onclick="TextEffect();" value="エフェクト反映" />
+	<input type="button" id="TextEffect" onclick="TextEffect();" value="反映" />
     	<input type="button" id="TextCopy" onclick="TextCopy();" value="copy" />
 	
 	<div class="row">
@@ -79,7 +80,7 @@ fn系（回転）同士はネストできません。</p>
 		<font style="color:#0000ff;">文字色</font></label>
 		<input id="effect1" type="color"></br>
 
-		<input type="radio" id="elements" name="level" value="1" checked><label for="text1">
+		<input type="radio" id="elements" name="level" value="2" checked><label for="text1">
 		<font style="background:lightpink;">背景色</font></label>
 		<input id="effect2" type="color"></br>
 		<ul>
@@ -99,6 +100,7 @@ fn系（回転）同士はネストできません。</p>
 			<li>$[bounce テキスト] バウンド</li>
 			<li>$[shake テキスト] ぶるぶる</li>
 			<li>$[twitch テキスト] ブレ</li>
+			<li>$[scale.x=2,y=2 テキスト]引き伸ばし （横、縦）オプションなしでは動作しない</li>
 		</ul>
 	  </div>
 	  <div class="one-half column">
@@ -107,6 +109,7 @@ fn系（回転）同士はネストできません。</p>
 			<li>$[flip テキスト] 左右反転</li>
 			<li>$[flip.v テキスト] 上下反転</li>
 			<li>$[flip.h,v テキスト] 左右上下反転</li>
+			<li>$[spin.left,speed=0.3s テキスト] 回転（回転方向、速さ）</li>
 		<ul>
 	  </div>
 	</div>
