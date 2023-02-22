@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./Skeleton-2.0.4/css/skeleton.css">
+    <link rel="apple-touch-icon" href="img/homeicon.png" sizes="180x180">
+    <style>
+     h2{font-size:1.2em; background:lightpink;}
+     label{text-decoration:none; font-weight:normal;display: inline;}
+    </style>
+  <title>Misskey早見表＆入力補助</title>
+  
+      <script>
+  function TextEffect(){
+    var nyanpu = document.getElementById("mytextarea").value; //インプットテキスト
+    
+    //チェックされているラジオボタンを取得
+    var len = elements.length;
+    var getChecked = "";
+    for (var i = 0; i < len; i++){
+    if (elements.item(i).checked){
+        getChecked = elements.item(i).value;
+        }
+    }
+alert(nyanpu + getChecked);
+
+    //チェックされた項目によって分岐
+    switch (getChecked){
+    //文字色と背景色
+    case "1": 
+         var effect1 = document.getElementById("effect1").value;
+         var nyanpu = "$[fg.color= " + effect1 + " " + nyanpu + "]";
+         break;
+		    
+    case "2": 
+         var effect2 = document.getElementById("effect1_bg").value;
+         var nyanpu = "$[bg.color= " + effect2 + " " + nyanpu + "]";
+         break;
+		    
+    case "3": 
+          var nyanpu = "$[font.serif "+nyanpu+"]";
+           break; //serif serifフォント
+    case "4":
+          var nyanpu = "$[font.monospace "+nyanpu+"]";
+           break; //monospaceフォント
+    }
+    
+//ここまで
+
+    //出力
+    document.getElementById("mytextarea").value = nyanpu;
+  }
+    
+    //クリップボードにコピー
+    function TextCopy(){
+    alert("ボタンが押されました");
+    }
+  </script>
+  
+</head>
+<body>
+<div class="container">
+<p>分散型SNS　Misskey.ioの記法メモ<br>
+fn系（回転）同士はネストできません。</p>
+
+	<label>入力</label><br>
+	<textarea id="mytextarea" cols="40" rows="5"></textarea><br>
+	<input type="button" id="TextEffect" onclick="TextEffect();" value="エフェクト反映" />
+    <input type="button" id="TextCopy" onclick="TextCopy();" value="copy" />
+<div class="row">
+	$～はmisskeyの入力欄に入力するとサジェストで出る
+	<h2>装飾</h2>
+	<input type="radio" id="elements" name="level" value="1" checked><label for="text1">
+	<font style="color:#0000ff;">文字色</font></label>
+	<input id="effect1" type="color"></br>
+	
+	<input type="radio" id="elements" name="level" value="1" checked><label for="text1">
+	<font style="background:lightpink;">背景色</font></label>
+	<input id="effect2" type="color"></br>
+	
+	<li>$[x2 テキスト] 拡大表示</label></li>
+	<li>$[blur テキスト] ぼかし</label></li>
+	<input type="radio" id="elements" name="level" value="3" checked><label for="text2">serif serifフォント</label>
+	<input type="radio" id="elements" name="level" value="4" checked><label for="text3">monospaceフォント</label>
+</div>
+<div class="row">
+  <div class="one-half column">
+	<h2>動かす</h2>
+	<li>$[jelly テキスト] びよんびよん</li>
+	<li>$[tada テキスト] じゃーん</li>
+	<li>$[jump テキスト] ジャンプ</li>
+	<li>$[bounce テキスト] バウンド</li>
+	<li>$[shake テキスト] ぶるぶる</li>
+	<li>$[twitch テキスト] ブレ</li>
+  </div>
+  <div class="one-half column">
+	<h2>反転、回転</h2>
+	<li>$[flip テキスト] 左右反転</li>
+	<li>$[flip.v テキスト] 上下反転</li>
+	<li>$[flip.h,v テキスト] 左右上下反転</li>
+  </div>
+</div>
+
+<h2>そのほか</h2>
+<div class="row">
+	<ul>
+		<li>引用：>引用表示したいテキスト</li>
+		<li>シンタックス表示：`テキスト`</li>
+		<li>タイトル表示：【タイトル】</li>
+		<li>検索：検索キーワード1 検索キーワード2 検索</li>
+	</ul>
+	<p>参照：<a href="https://ondix.work/mfm-cheat-sheet">Misskeyチートシート</a></p>
+</div>
+
+</div>
+</div>
+</body>
+</html>
