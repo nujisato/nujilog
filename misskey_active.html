@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="skeleton.css">
+    <style>
+     h2{font-size:1.2em; background:lightpink;}
+     label{text-decoration:none; font-weight:normal;display: inline;}
+    </style>
+  <title>Misskey入力補助</title>
+  
+      <script>
+  function TextEffect(){
+    var nyanpu = document.getElementById("mytextarea").value; //インプットテキスト
+    
+    //チェックされているラジオボタンを取得
+    var len = elements.length;
+    var getChecked = "";
+    for (var i = 0; i < len; i++){
+    if (elements.item(i).checked){
+        getChecked = elements.item(i).value;
+        }
+    }
+alert(nyanpu + getChecked);
+
+    //チェックされた項目によって分岐
+    switch (getChecked){
+    //前景色と背景色
+    case "1": 
+         var effect1_font = document.getElementById("effect1_font").value;
+         var effect1_bg = document.getElementById("effect1_bg").value;
+         var nyanpu = "<color " + effect1_font + " " + effect1_bg + ">" + nyanpu + "</color>";
+         alert("適用されました。");
+         break;
+    
+    case "2": 
+         var nyanpu = "$[x2 "+nyanpu+"]"; break;
+          //拡大表示
+    case "3": 
+         var nyanpu = "$[blur "+nyanpu+"]"; break;
+          //ぼかし
+    case "4":
+          var nyanpu = "$[font.serif "+nyanpu+"]";
+           break; //serif serifフォント
+    case "5":
+          var nyanpu = "$[font.monospace "+nyanpu+"]";
+           break; //monospaceフォント
+    
+    //動き系
+    case "10":
+          var nyanpu = "$[jelly "+nyanpu+"]";
+           break; //びよんびよん motionに同じ};
+    case "11":
+          var nyanpu = "$[tada "+nyanpu+"]";
+           break; //じゃーん 太字にならないビッグ＋に同じ
+    case "12":
+          var nyanpu = "$[jump "+nyanpu+"]";
+           break; //ジャンプ jump同じ
+    case "13":
+          var nyanpu = "$[bounce "+nyanpu+"]";
+           break; //バウンド
+    case "14":
+          var nyanpu = "$[shake "+nyanpu+"]";
+           break; //ぶるぶる
+    case "15":
+          var nyanpu = "$[twitch "+nyanpu+"]";
+           break; //ブレ
+
+    //反転、回転
+    case "20":
+          var nyanpu = "$[flip "+nyanpu+"]";
+           break; //左右反転
+    case "21":
+          var nyanpu = "$[flip.v "+nyanpu+"]";
+           break; // //上下反転
+    case "22":
+          var nyanpu = "$[flip.h,v "+nyanpu+"]";
+           break; //左右上下反転
+    
+    }
+    
+//ここまで
+
+    //出力
+    document.getElementById("mytextarea").value = nyanpu;
+  }
+    
+    //クリップボードにコピー
+    function TextCopy(){
+    alert("ボタンが押されました");
+    }
+  </script>
+  
+</head>
+<body>
+<div class="container">
+<p>分散型SNS　Misskey.ioの入力補助ツールです。<br>
+テキストを入力して「エフェクト反映」を押すとタグが挿入されます。<br>
+fn系（回転）同士はネストできません。</p>
+
+	<label>入力</label><br>
+	<textarea id="mytextarea" cols="40" rows="5"></textarea><br>
+	<input type="button" id="TextEffect" onclick="TextEffect();" value="エフェクト反映" />
+    <input type="button" id="TextCopy" onclick="TextCopy();" value="copy" />
+<div class="row">
+  <div class="one-half column">
+	<h2>装飾</h2>
+	<input type="radio" id="elements" name="level" value="1" checked><label for="text1"><font style="color:#0000ff; background:lightpink;">前景色と背景色</font></label> <input id="effect1_font" type="color"><input id="effect1_bg" type="color"></br>
+	<input type="radio" id="elements" name="level" value="2"><label for="text2">拡大表示</label></br>
+	<input type="radio" id="elements" name="level" value="3"><label for="text3">ぼかし</label></br>
+	<input type="radio" id="elements" name="level" value="4"><label for="text4">serif serifフォント</label></br>
+	<input type="radio" id="elements" name="level" value="5"><label for="text5">monospaceフォント</label></br>
+  </div>
+  <div class="one-half column">
+	<h2>動かす</h2>
+	<input type="radio" id="elements" name="level" value="10"><label for="">びよんびよん</label></br>
+	<input type="radio" id="elements" name="level" value="11"><label for="">じゃーん</label></br>
+	<input type="radio" id="elements" name="level" value="12"><label for="">ジャンプ</label></br>
+	<input type="radio" id="elements" name="level" value="13"><label for="">バウンド</label></br>
+	<input type="radio" id="elements" name="level" value="14"><label for="">ぶるぶる</label></br>
+	<input type="radio" id="elements" name="level" value="15"><label for="">ブレ</label></br>
+  </div>
+</div>
+<div class="row">
+	<h2>反転、回転</h2>
+	<input type="radio" id="elements" name="level" value="20"><label for="">左右反転</label></br>
+	<input type="radio" id="elements" name="level" value="21"><label for="">上下反転</label></br>
+	<input type="radio" id="elements" name="level" value="22"><label for="">左右上下反転</label></br>
+</div>
+
+
+<h2>そのほか</h2>
+<div class="row">
+	手入力したほうが早いっ( ΦωΦ⊂彡☆))Д´) ﾊﾟｰﾝ
+	<ul>
+		<li>引用：>引用表示したいテキスト</li>
+		<li>シンタックス表示：`テキスト`</li>
+		<li>タイトル表示：【タイトル】</li>
+		<li>検索：検索キーワード1 検索キーワード2 検索</li>
+	</ul>
+	<p>参照：<a href="https://ondix.work/mfm-cheat-sheet">Misskeyチートシート</a></p>
+</div>
+
+</div>
+</div>
+</body>
+</html>
