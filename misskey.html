@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -64,8 +63,7 @@
 </head>
 <body>
 <div class="container">
-<p>分散型SNS　Misskey.ioの記法メモ<br>
-fn系（回転）同士はネストできません。</p>
+<p>分散型SNS　Misskey.ioの記法メモ</p>
 
 	<label>入力</label><br>
 	<textarea id="mytextarea" cols="40" rows="5"></textarea><br>
@@ -73,25 +71,41 @@ fn系（回転）同士はネストできません。</p>
     	<input type="button" id="TextCopy" onclick="TextCopy();" value="copy" />
 	
 	<div class="row">
-		$～はmisskeyの入力欄に入力するとサジェストで出る
+		$～はmisskeyの入力欄に入力するとサジェストで出る<br>
+		パラメーターは「,」で区切って記載<br>
+		例：縦横2倍サイズ $[scale.x=2,y=2 テキスト]<br>
+		ネストで複数効果を同時にかけることが可能<br>
+	</div>
+	
+	<div class="row">
 		<h2>装飾</h2>
 
-		<input type="radio" id="elements" name="level" value="1" checked><label for="text1">
+		<input type="radio" id="elements" name="level" value="1" checked><labe>
 		<font style="color:#0000ff;">文字色</font></label>
 		<input id="effect1" type="color"></br>
 
-		<input type="radio" id="elements" name="level" value="2" checked><label for="text1">
+		<input type="radio" id="elements" name="level" value="2"><label>
 		<font style="background:lightpink;">背景色</font></label>
 		<input id="effect2" type="color"></br>
 		<ul>
+			<li>$[fg $[rainbow テキスト]] レインボー</label></li>
 			<li>$[x2 テキスト] 拡大表示</label></li>
 			<li>$[blur テキスト] ぼかし</label></li>
-			<input type="radio" id="elements" name="level" value="3" checked><label for="text2">serif serifフォント</label>
-			<input type="radio" id="elements" name="level" value="4" checked><label for="text3">monospaceフォント</label>
+			<li><input type="radio" id="elements" name="level" value="3"><label>serif 明朝体</label>
+			    <input type="radio" id="elements" name="level" value="4"><label>monospace 等倍フォント</label></li>
+			<li>$[scale.x=2,y=2 テキスト] 引き伸ばし(x,y)</li>
+			<li>$[flip テキスト] 左右反転(v,h)</li>
 		</ul>
 	</div>
+	
 	<div class="row">
-	  <div class="one-half column">
+	<h2>位置</h2>
+		<ul>
+			<li>$[position.x=1.0,y=-0.5 テキスト] 表示位置指定(x,y)</li>
+		</ul>
+	</div>
+
+	<div class="row">
 		<h2>動かす</h2>
 		<ul>
 			<li>$[jelly テキスト] びよんびよん</li>
@@ -100,26 +114,26 @@ fn系（回転）同士はネストできません。</p>
 			<li>$[bounce テキスト] バウンド</li>
 			<li>$[shake テキスト] ぶるぶる</li>
 			<li>$[twitch テキスト] ブレ</li>
-			<li>$[scale.x=2,y=2 テキスト]引き伸ばし （横、縦）オプションなしでは動作しない</li>
+			<li>$[sparkle テキスト] キラキラ</li>
+			<li>$[spin.x,speed=0.3s テキスト] 回転(left,x,y,speed=0.3s)</li>
 		</ul>
-	  </div>
-	  <div class="one-half column">
-		<h2>反転、回転</h2>
-		  <ul>
-			<li>$[flip テキスト] 左右反転</li>
-			<li>$[flip.v テキスト] 上下反転</li>
-			<li>$[flip.h,v テキスト] 左右上下反転</li>
-			<li>$[spin.left,speed=0.3s テキスト] 回転（回転方向、速さ）</li>
-		<ul>
-	  </div>
 	</div>
 
+	<div class="row">
+	<h2>応用</h2>
+	<ul>
+		<li>$[spin.speed=7s $[spin.left,speed=3.5s [$spin.speed=7s (Φ∀Φ)]:blank:]:blank:] 左右に移動</li>
+	</ul>
+	</div>
+	
 	<div class="row">
 	<h2>そのほか</h2>
 		<ul>
 			<li>>引用表示したいテキスト</li>
 			<li>`シンタックス表示` </li>
 			<li>【タイトル】</li>
+			<li>~~打消し~~</li>
+			<li>**太字**</li>
 			<li>🐬 お前を消す方法 検索</li>
 		</ul>
 		<p>参照：<a href="https://ondix.work/mfm-cheat-sheet">Misskeyチートシート</a></p>
