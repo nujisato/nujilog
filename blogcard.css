@@ -35,3 +35,41 @@
  </div>
 </div></a>
  */
+
+/* 見出し装飾 */
+h2 {
+     position: relative;
+     padding:0.5em 0.5em 0.5em 1.8em;
+     border: 1px solid #CCC;
+     border-radius: 5px;
+}
+ 
+h2::after {
+     position: absolute;
+     top: 50%;
+     left:0.7em;
+     transform:translateY(-50%);
+     content: '';
+     width: 8px;
+     height:8px;
+     border: solid 3px #99FF33;
+     border-radius:100%;
+}
+
+h3 {
+  position: relative;/*相対位置*/
+  padding-left: 1.2em;/*アイコン分のスペース*/
+  line-height: 1.4;/*行高*/
+  color: #7b6459;/*文字色*/
+}
+
+h3:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1b0";/*アイコンのユニコード*/
+  font-weight: 900;
+  position: absolute;/*絶対位置*/
+  font-size: 1em;/*サイズ*/
+  left: 0;/*アイコンの位置*/
+  top: 0;/*アイコンの位置*/
+  color: #ff938b; /*アイコン色*/
+}
