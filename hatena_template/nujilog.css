@@ -49,16 +49,16 @@ body{background:#f4f4ef;font-size:16px;font-family:Helvetica Neue,Helvetica,Univ
 .header-image-only #blog-title{border-top:none}
 #blog-title+#top-editarea,#blog-title+#top-box,#blog-title+#content{border-top:1px solid #fff}
 #top-editarea,#bottom-editarea,#top-box{padding:80px 80px 0}
-#bottom-editarea{padding-bottom:40px}
+#bottom-editarea{padding-bottom:20px}
 #content{margin:0 auto; max-width:1200px;}
-#content-inner{margin:80px 80px 0}
+#content-inner{margin:40px 40px 0}
 #box2{border-top:1px solid #c9c9c3;margin:160px 0 0;font-size:14px}
 #box2-inner{border-top:1px solid white;padding:20px 0 0;overflow:hidden}
-#footer{border-top:1px solid #c9c9c3;margin:120px 80px 0}
+#footer{border-top:1px solid #c9c9c3;margin:60px 20px 0}
 #footer-inner{border-top:1px solid white;text-align:right;padding:10px 0 20px;font-size:12px;color:#aaa;line-height:1.8}
 #footer-inner a{color:#666;border:none}
 #footer-inner a:hover{border-bottom:1px solid #000}
-#title a{font-size:28px;font-weight:700;font-family:Source Code Pro,sans-serif;text-shadow:0px 1px 1px #a0a0a0;letter-spacing:1px}
+#title a{font-size:28px;font-weight:700;font-family:Source Code Pro,sans-serif;letter-spacing:1px}
 #blog-description{margin:10px 0 0;color:#333;font-size:14px;font-weight:700;font-family:Source Code Pro,sans-serif}
 .entry{clear:both;overflow:hidden;position:relative;margin:0 0 160px}
 .entry-header a{border:none}
