@@ -22,12 +22,12 @@
 
 .entry-footer-profile-left {
     width: 20%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .entry-footer-profile-right {
     width: 80%;
-    padding: 10px 10px 10px 0;
+    padding: 10px ;
 }
 
 .entry-footer-profile-icon {
@@ -51,9 +51,7 @@
     font-size: 100%;
     text-align: center;
 }
-.entry-footer-profile-description {
-    margin-bottom: 10px;
-}
+.entry-footer-profile-description {}
 /* スマートフォン */
 @media only screen and (max-width: 767px) {
   .entry-footer-profile-body {
