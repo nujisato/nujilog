@@ -1,16 +1,17 @@
 /* 記事下プロフィールカード */
 
 .entry-footer-profile {
-    border: 2px solid #cca1af;
+    border: 2px solid #e6bfab;
     box-sizing: border-box;
     width: 100%;
     max-width:800px;
-    padding:5px;
+    padding:0px;
     margin: 20px 0 20px 0;
 }
 .entry-footer-profile-title{
-   margin:5px;
+   padding:10px;
    font-weight:700;
+   background:#fdede4;
 }
 .entry-footer-profile-body {
     display: -webkit-flex;
