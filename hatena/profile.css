@@ -55,6 +55,13 @@
     font-size: 100%;
     text-align: center;
 }
+.entry-footer-profile-banner{
+ font-weight: bold;
+ width:100%;
+ margin-top:5px;
+ padding:5px 10px 5px 10px;
+ border:1px solid　#e8d3ca;
+}
 .entry-footer-profile-description {}
 /* スマートフォン */
 @media only screen and (max-width: 767px) {
