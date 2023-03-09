@@ -1,8 +1,6 @@
 // アイコンフォント(フリーのみ）
 // https://johobase.com/font-awesome-icon-font-list-free/
 
-
-<script>
 window.onload = function() {
    const ProfileHTML = '<div class="entry-footer-profile">'+
     '<div  class="entry-footer-profile-title">Profile</div>'+
@@ -24,4 +22,3 @@ window.onload = function() {
     '</div>';
    document.querySelector('.entry-content').insertAdjacentHTML('beforeend', ProfileHTML);
 };
-</script>
