@@ -1,6 +1,7 @@
 // アイコンフォント(フリーのみ）
 // https://johobase.com/font-awesome-icon-font-list-free/
 
+
 <script>
 window.onload = function() {
    const ProfileHTML = '<div class="entry-footer-profile">'+
@@ -16,12 +17,11 @@ window.onload = function() {
               '<a href="https://huzisato.hateblo.jp/about" target="_blank" alt="はてなブログ"><i class="blogicon-hatenablog" style="color:#999;"></i></a>'+
               '<a href="https://misskey.io/@nujisato" target="_blank" alt="Misskey.io"><i><img src="https://nujisato.github.io/nujilog/hatena/misskey.png" style="width:30px;"></i></a>'+
             '</div>'+
-            '<div class="entry-footer-profile-banner"><a href="https://www.amazon.jp/hz/wishlist/ls/3DWOO91EYTV9E?ref_=wl_share" target="_blank" alt="Amazon"><i class="fab fa-amazon"> amazon ほしいものリスト</i></a></div>'+
-            '<div class="entry-footer-profile-banner"><a href="https://huzisato.notion.site/wiki-c0068d7b0d3240389702acf3cb2b5a3a" target="_blank" alt="Notion"><i class="fas fa-book-open"> Notion 過去の作品まとめ 音楽/絵/創作</i></a></div>'+
+            '<a href="https://www.amazon.jp/hz/wishlist/ls/3DWOO91EYTV9E?ref_=wl_share" target="_blank" alt="Amazon"><div class="entry-footer-profile-banner"><i class="fab fa-amazon"></i>amazon ほしいものリスト</div></a>'+
+            '<a href="https://huzisato.notion.site/wiki-c0068d7b0d3240389702acf3cb2b5a3a" target="_blank" alt="Notion"><div class="entry-footer-profile-banner"><i class="fas fa-book-open"></i>Notion 過去の作品まとめ 音楽/絵/創作</div></a>'+
         '</div>'+
     '</div>'+
     '</div>';
    document.querySelector('.entry-content').insertAdjacentHTML('beforeend', ProfileHTML);
-   
 };
 </script>
