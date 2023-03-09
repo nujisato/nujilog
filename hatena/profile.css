@@ -8,7 +8,9 @@
     padding:0px;
     margin: 20px 0 20px 0;
 }
-.entry-footer-profile a{color:#bd6856; text-decoration:none;}
+.entry-footer-profile a{
+    color:#6c3524; text-decoration:none;
+}
 
 .entry-footer-profile-title{
    padding:5px 15px 5px 15px;
@@ -43,16 +45,16 @@
 
 .entry-footer-profile-sns i{
     margin-top:10px;
-    font-size:1.5em;
+    font-size:1.7em;
     font-style:normal;
     letter-spacing:0.4em;
     color:#000;
 }
 .entry-footer-profile-sns img{
-    width:30px;
+    width:34px;
+    border-radius: 50%;
 }
 .entry-footer-profile-id {
-    font-weight: bold;
     font-size: 100%;
     text-align: center;
 }
@@ -61,6 +63,7 @@
  margin-top:5px;
  padding:5px 10px 5px 10px;
  border:1px solid #e8d3ca;
+ background:#f7f6f5;
 }
 .entry-footer-profile-description {}
 /* スマートフォン */
