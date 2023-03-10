@@ -1,6 +1,4 @@
-/* 記事下プロフィールカード */
-
-.entry-footer-profile {
+.addprof {
     border: 2px solid #e6bfab;
     box-sizing: border-box;
     width: 100%;
@@ -8,34 +6,34 @@
     padding:0px;
     margin: 20px 0 20px 0;
 }
-.entry-footer-profile a{
+.addprof a{
     color:#6c3524; text-decoration:none;
 }
 
-.entry-footer-profile-title{
+.addprof-title{
    padding:5px 15px 5px 15px;
    font-weight:700;
    background-color:#fdede4;
    color:#bd6856;
 }
-.entry-footer-profile-body {
+.addprof-body {
     display: -webkit-flex;
     display: flex;
     width: 100%;
     box-sizing: border-box;
 }
 
-.entry-footer-profile-left {
+.addprof-left {
     width: 20%;
     padding: 10px;
 }
 
-.entry-footer-profile-right {
+.addprof-right {
     width: 80%;
     padding: 10px ;
 }
 
-.entry-footer-profile-icon {
+.addprof-icon {
     display: block;
     width: 100px;
     height: 100px;
@@ -43,53 +41,72 @@
     margin: 0 auto;
 }
 
-.entry-footer-profile-sns i{
+.addprof-sns i{
     margin-top:10px;
     font-size:1.7em;
     font-style:normal;
     letter-spacing:0.4em;
     color:#000;
 }
-.entry-footer-profile-sns img{
+.addprof-sns img{
+    width:34px;
+}
+
+/* アイコンフォント部分 クラス名称の変更不可 */
+.blogicon-twitter{
+    color:#1DA1F2;
+}
+.blogicon-gist{
+    color:#000;
+}
+.blogicon-youtube{
+    color:#FF0000;
+}
+.blogicon-hatenablog{
+    color:#999;
+}
+.addprof-sns img{
     width:34px;
     border-radius: 50%;
 }
-.entry-footer-profile-id {
+
+/* ここまで */
+
+.addprof-id {
     font-size: 100%;
     text-align: center;
 }
-.entry-footer-profile-banner{
+.addprof-banner{
  width:auto;
  margin-top:5px;
  padding:5px 10px 5px 10px;
  border:1px solid #e8d3ca;
  background:#f7f6f5;
 }
-.entry-footer-profile-description {}
+.addprof-description {}
 /* スマートフォン */
 @media only screen and (max-width: 767px) {
-  .entry-footer-profile-body {
+  .addprof-body {
       -webkit-flex-wrap: nowrap; 
       flex-wrap: wrap;
   }
-    .entry-footer-profile-left {
+    .addprof-left {
       width: 100%;
       padding: 20px 20px 0 20px;
     }
-    .entry-footer-profile-right {
+    .addprof-right {
       width: 100%;
       padding: 0 20px 20px 20px;
   }
-    .entry-footer-profile-sns i{
+    .addprof-sns i{
       margin-top:10px;
       font-size:2.0em;
       font-style:normal;
       letter-spacing:0.4em;
       color:#000;
    }
-    .entry-footer-profile-sns img{
+    .addprof-sns img{
       width:44px;
       border-radius: 50%;
    }
 }
-
