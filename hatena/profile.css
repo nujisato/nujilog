@@ -28,13 +28,13 @@
     margin-top:10px;
     letter-spacing:0.4em;
     font-size:1.7em; font-style:normal;}
+.addprof-sns img{width:34px; border-radius: 50%; }
 
 /* アイコンフォント部分 クラス名称の変更不可 */
 .blogicon-twitter{color:#1DA1F2;}
 .blogicon-gist{color:#000;}
 .blogicon-youtube{color:#FF0000;}
 .blogicon-hatenablog{color:#999;}
-.addprof-sns img{width:34px; border-radius: 50%; margin: 0 auto}
 /* ここまで */
 
 .addprof-id {font-size: 100%; text-align: center;}
@@ -61,10 +61,8 @@
   }
     .addprof-sns i{
       margin-top:10px;
-      font-size:2.0em;
-      font-style:normal;
+      font-size:2.0em; font-style:normal;
       letter-spacing:0.4em;
-      color:#000;
    }
     .addprof-sns img{
       width:48px;
