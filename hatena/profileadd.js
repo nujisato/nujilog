@@ -1,6 +1,6 @@
 // アイコンフォント(フリーのみ）
 // https://johobase.com/font-awesome-icon-font-list-free/
-<script>
+
 window.onload = function() {
    const ProfileHTML = '<div class="addprof">'+
     '<div  class="addprof-title">Profile</div>'+
@@ -22,4 +22,4 @@ window.onload = function() {
     '</div>';
    document.querySelector('.entry-content').insertAdjacentHTML('beforeend', ProfileHTML);
 };
-</script>
+
