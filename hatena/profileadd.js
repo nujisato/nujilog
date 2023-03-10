@@ -9,10 +9,10 @@ window.onload = function() {
         '<div class="addprof-right">'+
             '<div class="addprof-description">ソシャゲしてる鼻炎のぬこ。気が向いたときに絵をかいたり曲を作ったり。</div> '+
             '<div class="addprof-sns">'+
-              '<a href="https://twitter.com/huzisato" target="_blank" alt="twitter"><i class="blogicon-twitter"></i></a>'+
-              '<a href="https://nujisato.github.io/nujilog/" target="_blank" alt="Github"><i class="blogicon-gist"></i></a>'+
-              '<a href="https://www.youtube.com/@nujisato" target="_blank" alt="Youtube"><i class="blogicon-youtube"></i></a>'+
-              '<a href="https://huzisato.hateblo.jp/about" target="_blank" alt="はてなブログ"><i class="blogicon-hatenablog"></i></a>'+
+              '<a href="https://twitter.com/huzisato" target="_blank" alt="twitter"><i class="fab fa-twitter"></i></a>'+
+              '<a href="https://nujisato.github.io/nujilog/" target="_blank" alt="Github"><i class="fab fa-github"></i></a>'+
+              '<a href="https://www.youtube.com/@nujisato" target="_blank" alt="Youtube"><i class="fab fa-youtube"></i></a>'+
+              '<a href="https://huzisato.hateblo.jp/about" target="_blank" alt="はてなブログ"><i class="fas fa-pen-nib"></i></a>'+
               '<a href="https://misskey.io/@nujisato" target="_blank" alt="Misskey.io"><img src="https://nujisato.github.io/nujilog/hatena/misskey.png"></a>'+
             '</div>'+
             '<a href="https://www.amazon.jp/hz/wishlist/ls/3DWOO91EYTV9E?ref_=wl_share" target="_blank" alt="Amazon"><div class="addprof-banner"><i class="fab fa-amazon"></i>amazon ほしいものリスト</div></a>'+
