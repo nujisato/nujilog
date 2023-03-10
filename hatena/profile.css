@@ -26,14 +26,16 @@
 
 .addprof-sns i{
     line-height:100%;
-    margin-right:5px;
+    margin-right:10px;
     padding:5px;
     font-size:2em; 
-    border:solid 2px #e8d3ca;border-radius: 10px;
+    border-radius: 10px;
     }
 
-.addprof-sns img{width:34px;
-    background:#e8d3ca;border-radius: 10px; }
+.addprof-sns img{
+    vertical-align:top;
+    width:34px;
+    border-radius: 10px; }
 
 /* アイコンフォント部分 クラス名称の変更不可 */
 .blogicon-twitter{color:#1DA1F2;}
