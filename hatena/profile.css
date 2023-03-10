@@ -25,10 +25,11 @@
     border-radius: 50%;}
 
 .addprof-sns i{
+    line-height:100%;
     margin-right:5px;
     padding:5px;
     font-size:2em; 
-    background:#e8d3ca;border-radius: 10px;
+    border:solid 2px #e8d3ca;border-radius: 10px;
     }
 
 .addprof-sns img{width:34px;
@@ -64,8 +65,7 @@
       padding: 0 20px 20px 20px;
   }
     .addprof-sns i{
-      font-size:2.2em; 
-      background:#e8d3ca;border-radius: 50%
+      font-size:2.6em; 
    }
     .addprof-sns img{
       width:48px;
