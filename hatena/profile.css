@@ -28,13 +28,13 @@
     line-height:100%;
     margin-right:10px;
     padding:5px;
-    font-size:2em; 
+    font-size:1.6em; 
     border-radius: 10px;
     }
 
 .addprof-sns img{
     vertical-align:top;
-    width:34px;
+    width:28px;
     border-radius: 10px; }
 
 /* アイコンフォント部分 クラス名称の変更不可 */
