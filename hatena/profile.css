@@ -22,13 +22,13 @@
 .addprof-icon {
     display: block; margin: 0 auto;
     width: 100px;height: 100px;
-    border-radius: 50%;}
+    border-radius: 20%;}
 
 .addprof-sns i{
     margin-top:10px;margin-right:5px;
     padding:5px;
     font-size:2em; font-style:normal;
-    background:#e8d3ca;border-radius: 50%;
+    background:#e8d3ca;border-radius: 20%;
     }
 
 .addprof-sns img{width:34px;
