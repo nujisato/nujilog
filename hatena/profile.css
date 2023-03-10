@@ -61,11 +61,13 @@
   }
     .addprof-sns i{
       margin-top:10px;
-      font-size:2.0em; font-style:normal;
+      font-size:2.2em; font-style:normal;
       letter-spacing:0.4em;
+      background:#e8d3ca;border-radius: 50%
    }
     .addprof-sns img{
       width:48px;
       border-radius: 50%;
+      background:#e8d3ca;border-radius: 50%
    }
 }
