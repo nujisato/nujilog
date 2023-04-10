@@ -5,7 +5,7 @@ window.onload = function() {
    const ProfileHTML = '<div class="addprof">'+
     '<div  class="addprof-title">Profile</div>'+
     '<div class="addprof-body">'+
-        '<div class="addprof-left"><img src="https://pbs.twimg.com/profile_images/1600138967382626304/lMCKKzBM_400x400.jpg" class="addprof-icon" alt="hujisatoのアイコン"><p class="addprof-id"><a href="https://huzisato.hateblo.jp/about">hatema id:huzisato</a></p></div>'+
+        '<div class="addprof-left"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/huzisato/20230407/20230407175728.jpg" class="addprof-icon" alt="hujisatoのアイコン"><p class="addprof-id"><a href="https://huzisato.hateblo.jp/about">hatema id:huzisato</a></p></div>'+
         '<div class="addprof-right">'+
             '<div class="addprof-description">ソシャゲしてる鼻炎のぬこ。気が向いたときに絵をかいたり曲を作ったり。</div> '+
             '<div class="addprof-sns">'+
