@@ -1,7 +1,8 @@
 /* はてなブログの追加css 見出し装飾用です */
 
 /* スライダー用スタイル Swiper.js使用 */
-
+.swiper{height:200px;}
+.swiper-slide img{height:140px;width:100%;object-fit: cover;}
 
 /* 見出し装飾*/
 h3 {
