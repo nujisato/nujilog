@@ -1,0 +1,64 @@
+h1{text-align: center; margin-top:1.0em;}
+h2{text-align: center; font-size:1.4em; margin-top:1.4em;}
+h3{font-size:1.0em; margin:1.0em 1.4em 0.4em 1.4em;font-weight: 600;}
+p{margin-bottom: 1rem; }
+.sns{border-radius: 15px;
+     height:30px;
+     line-height: 2.6em;}
+
+.columns img{width: 100%;
+           height: 140px; object-fit: cover;
+            display: block;
+            background:#e6edf3;
+            margin-bottom:1em;}
+
+/* アコーディオン 参考：https://pote-chil.com/html-maker/accordion */
+
+.accordion-004 {
+margin-bottom: 7px;
+background:#e6edf3;
+}
+
+.accordion-004 summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0.5em 1em;
+    color: #333333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accordion-004 summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-004 summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid #333333b3;
+    border-right: 3px solid #333333b3;
+    content: '';
+    transition: transform .3s;
+}
+
+.accordion-004[open] summary::after {
+    transform: rotate(225deg);
+}
+
+.accordion-004 p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    color: #333333;
+    transition: transform .5s, opacity .5s;
+}
+
+.accordion-004[open] p {
+    transform: none;
+    opacity: 1;
+}
