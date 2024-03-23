@@ -4,7 +4,7 @@
 .swiper{height:200px;}
 .swiper-slide img{height:140px;width:100%;object-fit: cover;}
 
-h2 {
+h3 {
   /*線の種類（実線） 太さ 色*/
   border-bottom: solid 3px black;
 }
