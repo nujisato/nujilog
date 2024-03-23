@@ -1,12 +1,13 @@
-/* はてなブログの追加css 見出し装飾用です */
+メニュー/* はてなブログの追加css 見出し装飾用です */
 
-/* スライダー用スタイル Swiper.js使用 */
+/*メニュー スライダー用スタイル Swiper.js使用 */
 .swiper{height:200px;}
 .swiper-slide img{height:140px;width:100%;object-fit: cover;}
 
 h3 {
-  /*線の種類（実線） 太さ 色*/
-  border-bottom: solid 3px black;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #000;
+  background: #f4f4f4;
 }
 
 h4 {
@@ -14,4 +15,15 @@ h4 {
   color: #494949;/*文字色*/
   background: transparent;/*背景透明に*/
   border-left: solid 5px #7db4e6;/*左線*/
+}
+
+/*コンテンツメニュー*/
+.table-of-contents ul:before {
+content: "Contents";
+}
+.table-of-contents ul{
+  background:#f8f8ff;
+  marghin:10;
+  padding:10;
+  
 }
