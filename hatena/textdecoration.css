@@ -18,12 +18,12 @@ h4 {
 }
 
 /*コンテンツメニュー*/
-.table-of-contents ul:before {
-content: "Contents";
-}
-.table-of-contents ul{
+.table-of-contents {
   background:#f8f8ff;
   marghin:10;
   padding:10;
-  
+}
+
+li {
+list-style-position: inside;
 }
