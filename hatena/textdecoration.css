@@ -4,7 +4,7 @@
 .swiper{height:200px;}
 .swiper-slide img{height:140px;width:100%;object-fit: cover;}
 
-/* 見出し装飾*/
+/* 見出し装飾
 h3 {
   position: relative;/*相対位置*/
   padding: 0.3em 0.3em 0.3em 1.8em;
@@ -48,3 +48,4 @@ h4:before {
 h5{
   background: repeating-linear-gradient(135deg, #f7f3ed, #f7f3ed 5px, transparent 5px, transparent 10px);
 }
+*/
