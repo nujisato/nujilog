@@ -19,12 +19,6 @@ h4 {
 }
 
 /*コンテンツメニュー*/
-.table-of-contents::before {
-content: "MENU";
-  color:#ffffff;
-  font-weight: 700;
-  background:#708090;
-}
 .table-of-contents {
   background:#f5f5f5;
   font-size:0.86em;
