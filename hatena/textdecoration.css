@@ -18,10 +18,19 @@ h4 {
 }
 
 /*コンテンツメニュー*/
-.table-of-contents {
-  background:#f8f8ff;
+.table-of-contents::before {
+content: "MENU";
   marghin:10;
-  padding:10;
+  padding:10 30 10 30;
+  color:#ffffff;
+  font-weight: 700;
+  background:#708090;
+}
+.table-of-contents {
+  background:#e6e6fa;
+  marghin:20;
+  padding:20;
+  font-size:0.9em;
 }
 
 li {
