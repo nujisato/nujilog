@@ -1,19 +1,21 @@
+<!--2025/1/3 更新-->
+<!-- css framework: https://picturepan2.github.io/spectre/ -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="./Skeleton-2.0.4/css/skeleton.css">
-    <link rel="stylesheet" href="./Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" href="./Skeleton-2.0.4/css/custom.css">
-    <link rel="apple-touch-icon" href="img/icon_nujihub.png" sizes="180x180">
-	
-<!-- Icon Font https://github.com/Remix-Design/remixicon#usage -->
-<link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+	<!-- CSS framework:spectre.css -->
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+	<link rel="stylesheet" href="./MingCute-main/fonts/MingCute.css">
+	<link rel="stylesheet" href="./style.css">
+
+	<link rel="apple-touch-icon" href="img/icon_nujihub.png" sizes="180x180">
+    <!-- icon fonts https://phosphoricons.com/ -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 <!-- OGP -->
 <meta property="og:type" content="website" />
@@ -34,90 +36,158 @@
 <title>ぬじハブ</title>
 </head>
 <body>
-<div class="container">
-<h1><img src="https://nujisato.github.io/nujilog/img/nuji_icon.jpg" width="200px" alt="ぬじハブ" style="border-radius:50%;"></h1>
-<!-- SNSのリスト -->
-<div class="row">
-	<a class="button sns" href="https://twitter.com/huzisato" target="_blank" style="background:#00bfff;color:#ffffff;"><i class="ri-twitter-fill"></i>常駐</a>
-	<a class="button sns" href="https://twitter.com/nuji_meshi" target="_blank" style="background:#00bfff;color:#ffffff;"><i class="ri-twitter-fill" ></i>飯の写真</a>
-	<a class="button sns" href="https://bsky.app/profile/huzisato.bsky.social" target="_blank" style="background:#00bfff;color:#ffffff;">Bluesky</a>
-	<a class="button sns" href="https://misskey.io/@nujisato" target="_blank" style="background:#adff2f">misskey</a>
-	<a class="button sns" href="https://www.amazon.co.jp/hz/wishlist/ls/3DWOO91EYTV9E?ref_=wl_share" target="_blank">
-<i class="ri-amazon-fill"></i>ほしいものリスト</a>
-	<a class="button sns" href="https://min.togetter.com/id/huzisato" target="_blank">min.t</a>
-	<a class="button sns" href="https://www.instagram.com/nujisato/" target="_blank"><i class="ri-instagram-line"></i>Instagram</a>
-	<a class="button sns" href="https://youtube.com/@ritgrafilm" target="_blank" style="background:#c4302b; color:#ffffff;"><i class="ri-youtube-fill"></i>Youtube</a>
-	<a class="button sns" href="https://www.pixiv.net/users/433462" target="_blank" style="background:#00bfff;color:#ffffff;">Pixiv</a>
-	<a class="button sns" href="https://soundcloud.com/hujisato" target="_blank" style="background:#ff6800;color:#ffffff;">SoundCloud</a>
-	<a class="button sns" href="https://piapro.jp/ritgrafilm" target="_blank" style="background:#ff0982;color:#ffffff;">Piapro</a>
-	<a class="button sns" href="https://github.com/nujisato" target="_blank" style="background:#171515;color:#ffffff;">github</a>
-	
-</div>
-<!-- SNSのリスト -->
-
-<h2>nujisato's Profile</h2>
-<div>
-<p>ぬじさと 鼻炎のソシャゲマン ブログでソシャゲやSteamのゲームの話を書いてます。</p>
-<p>ここはたまに更新するハブページで、普段はTwitterにいます。</p>
-<p>RPGとか農場系のゲームが好き。アクション要素があるやつは苦手。昔のスクエニのゲーム曲が好きすぎて耳コピしていた。</p>
-<p>もっと詳しいプロフィール→ <a href="https://huzisato.hateblo.jp/about">はてなブログ about</a></p>
-<p>(ΦωΦ)(Φ∀Φ)なかよくしてね</p>
-
-
-<br><br>
-</div>
-
+<header>
+	<div class="hero bg-dark hero-sm">
+		<div class="hero-body container grid-lg">
+			<h1><figure class="avatar avatar-xl">
+				<img src="https://nujisato.github.io/nujilog/img/nuji_icon.jpg" width="200px" alt="huzisato">
+				</figure> nuji hub
+			</h1>
+			<p>ぬじさとの活動まとめページ</p>
+			<!-- SNSのリスト -->
+			<div class="chip">
+				<a href="https://twitter.com/huzisato" target="_blank"><span class="mgc_twitter_line avatar avatar-sm twitter avatar-font"></span>
+				huzisato</a>
+			</div>
+			<div class="chip">
+				<a href="https://twitter.com/nuji_meshi" target="_blank"><span class="mgc_twitter_line avatar avatar-sm twitter avatar-font"></span>
+				nuji_meshi</a>
+			</div>
+			<div class="chip">
+				<a href="https://bsky.app/profile/huzisato.bsky.social" target="_blank"><span class="mgc_bluesky_social_line avatar avatar-sm twitter avatar-font"></span>
+				huzisato</a>
+			</div>
+			<div class="chip">
+				<a href="https://taittsuu.com/users/nujisato" target="_blank"><img src="img/taittu_icon.png" class="avatar avatar-sm">
+				タイッツー</a>
+			</div>
+			<div class="chip">
+				<a href="https://nujisato.booth.pm/" target="_blank"><img src="img/booth.png" class="avatar avatar-sm">
+				Booth</a>
+			</div>
+			<div class="chip">
+				<a href="https://huzisato.hateblo.jp/" target="_blank"><img src="img/hatena.png" class="avatar avatar-sm">
+					ブログ</a></div>
+			<div class="chip">
+				<a href="https://misskey.io/@nujisato" target="_blank"><img src="img/misskey.png" class="avatar avatar-sm">
+					misskey</a></div>
+			<div class="chip">
+				<a href="https://www.amazon.co.jp/hz/wishlist/ls/3DWOO91EYTV9E?ref_=wl_share" target="_blank"><img src="img/amazon.png" class="avatar avatar-sm">
+					ほしいものリスト</a></div>
+			<div class="chip">
+				<a href="https://min.togetter.com/id/huzisato" target="_blank"><img src="img/mint.png" class="avatar avatar-sm">
+					tweetまとめ</a></div>
+			<div class="chip">
+				<a href="https://www.instagram.com/nujisato/" target="_blank"><span class="mgc_instagram_line avatar avatar-sm instagram avatar-font"></span>
+				nujisato</a></div>
+			<div class="chip">
+				<a href="https://youtube.com/@ritgrafilm" target="_blank"><span class="mgc_youtube_line avatar avatar-sm instagram avatar-font youtube avatar-font"></span>
+					Youtube</a></div>
+			<div class="chip">
+				<a href="https://www.pixiv.net/users/433462" target="_blank"><img src="img/pixiv.png" class="avatar avatar-sm">
+					Pixiv</a></div>
+			<div class="chip">
+				<a href="https://soundcloud.com/hujisato" target="_blank"><img src="img/soundcloud.png" class="avatar avatar-sm">
+					SoundCloud</a></div>
+			<div class="chip">
+				<a href="https://github.com/nujisato" target="_blank"><span class="mgc_github_line avatar avatar-sm instagram avatar-font github avatar-font"></span>
+					github</a></div>
+			<!-- SNSのリスト -->
+		</div>
+	</div>
+</header>
+	<div class="container grid-lg">
+		<h2>huzisato's Profile</h2>
+		<p>藤里＝ぬじさと</p>
+		<p>鼻炎のソシャゲマン ブログでソシャゲやSteamのゲームの話を書いてます。<br>そのほかにも気になったことをいろいろやります。</p>
+		<p>(ΦωΦ)(Φ∀Φ)なかよくしてね</p>
+		<p>最も更新頻度が高いのは
+			<a href="https://twitter.com/huzisato" target="_blank">Twitter（@huzisato）</a>と
+			<a href="https://huzisato.hateblo.jp/" target="_blank">ぬじろぐ</a>です。<br>
+		もしtwitterが消えてもぬじろぐは残ります。</p>
+	</div>
 
 <!-- リンク集 -->
-
-<div class="row" >
-	<a href="https://x.com/huzisato" target="blank"><div class="card">
-		<div class="img"><img src="./img/twitter.png"></div><div class="text">@huzisato<br>メイン垢 普段はここにいます。</div>
-	</div></a>
-
-	<a href="https://x.com/nuji_meshi" target="blank"><div class="card">
-		<div class="img"><img src="./img/twitter.png"></div><div class="text">@nuji_meshi<br>飯の写真をアップするだけ</div>
-	</div></a>
-
-	<a href="https://huzisato.hateblo.jp/" target="blank"><div class="card">
-		<div class="img"><img src="./img/hatena.png"></div><div class="text">はてなブログ<br>ゲームの攻略日記、その他いろいろ作ったりやったりしたことを書いてます</div>
-	</div></a>
-
-	<a href="https://huzisato.hateblo.jp/entry/2023/02/17/094057" target="blank"><div class="card">
-		<div class="img"><img src="./img/fgo.png"></div><div class="text">FGO<br>配布縛りプレイ気味のfgoメイン攻略記録。</div>
-	</div></a>
-
-	<a href="https://huzisato.hateblo.jp/entry/2020/06/22/130908" target="blank"><div class="card">
-		<div class="img"><img src="./img/megido.png"></div><div class="text">メギド72<br>各章の攻略編成メモ。縛りプレイ企画とかもやってます。</div>
-	</div></a>
-	
-	<a href="https://store.line.me/stickershop/product/9384778/ja" target="blank"><div class="card">
-		<div class="img"><img src="./img/line.png"></div><div class="text">ぬこちゃんLINEスタンプあります</div>
-	</div></a>
-	
-	<a href="https://huzisato.notion.site/Notion-c0068d7b0d3240389702acf3cb2b5a3a?pvs=4" target="_blank"><div class="card">
-		<div class="img"><img src="./img/notion.png"></div><div class="text">Notion<br>過去に作ったもの、オリジナルキャラなどのまとめ</div>
-	</div></a>
-	
-	<a href="https://huzisato.hateblo.jp/entry/2022/10/20/162214" target="_blank"><div class="card">
-		<div class="img"><img src="./img/music.png"></div><div class="text">UTAUライブラリ配布<br>オリジナル音源「藤音サト」配布してます</div>
-	</div></a>
-	<a href="https://nujisato.booth.pm/" target="_blank"><div class="card">
-		<div class="img"><img src="./img/music.png"></div><div class="text">BOOTH<br>過去に頒布したCDを無料ダウンロードできます。</div>
-	</div></a>
-	
-</div>
-<br><br>
-
-<div class="row">
-<!-- ニコニコ動画 ブログパーツ -->
-	<div class="one-half column"><iframe width="320" height="160" src="https://ext.nicovideo.jp/thumb_user/1790016" scrolling="no" style="border:solid 1px #CCC;" frameborder="0">藤里</iframe>
-		<div>niconico マイリスト<br>楽曲は<a href="https://piapro.jp/ritgrafilm" target="_blank">piapro</a>からダウンロードできます。</div><br><br><br>
+<!-- レスポンシブ対応colクラス
+ 12=全幅
+ col-sm-12 : 画面サイズがsmサイズ以下(600px)のとき12幅になる
+ col-6 : 通常時6/12幅　-->
+<div class="container grid-lg" >
+	<h2>Text</h2>
+	<div class="columns">
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://huzisato.hateblo.jp/">
+				<img src="./img/hatena.png" alt="アイコン">
+				<p>ぬじろぐ<br>ゲームの攻略日記＋映画＋作ったもの＋いろいろ</p>
+			</a>
+		</div>
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://huzisato.hateblo.jp/entry/2023/02/17/094057">
+				  <img src="./img/fgo.png" alt="はてなブログ/FGO記事">
+				<p>ぬじろぐ > FGO<br>メイン攻略記録</p>
+			</a>
+		</div>
 	</div>
-<!-- ニコニコ動画 ブログパーツ -->
+	<div class="columns">
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://huzisato.hateblo.jp/entry/2020/06/22/130908" target="blank">
+				<img src="./img/megido.png">
+				<p>ぬじろぐ > メギド72<br>各章の攻略編成メモ。縛りプレイ企画とかもやってます。</p>
+			</a>
+		</div>
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://huzisato.notion.site/Notion-c0068d7b0d3240389702acf3cb2b5a3a?pvs=4" target="_blank">
+				<span class="mgc_notion_fill"></span>
+				<p>Notion<br>過去に作ったもの、オリジナルキャラなどのまとめ</p>
+			</a>
+		</div>
+	</div>
 </div>
 
-css framework: <a href="http://getskeleton.com/">skeleton</a>
+<div class="container grid-lg" >
+	<h2>Sound</h2>
+	<div class="columns">
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://huzisato.hateblo.jp/entry/2022/10/20/162214" target="_blank">
+				<span class="mgc_music_3_line"></span><p>UTAUライブラリ配布<br>オリジナル音源「藤音サト」配布してます</p>
+			</a>
+		</div>
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://nujisato.booth.pm/" target="_blank">
+				<img src="./img/booth.png"><p>BOOTH<br>過去に頒布したCDを無料ダウンロードできます。</p>
+			</a>
+		</div>
+	</div>
+	<div class="columns">
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://ext.nicovideo.jp/thumb_user/1790016" target="_blank">
+				<img src="./img/niconico.png"><p>niconico<br>投稿したボカロ曲</p>
+			</a>
+		</div>
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://piapro.jp/ritgrafilm" target="_blank">
+				<img src="./img/piapro.png"><p>piapro</p>
+			</a>
+		</div>
+	</div>
 </div>
+
+<div class="container grid-lg" ><h2>Store</h2>
+	<div class="columns">
+		<div class="column col-sm-12 col-6">
+			<a class="mini-card" href="https://store.line.me/stickershop/product/9384778/ja" target="blank">
+				<span class="mgc_line_app_fill line_sns"></span>
+				<p>LINEスタンプ<br>ぬこちゃんLINEスタンプあります</p>
+			</a>
+		</div>
+		<div class="column col-sm-12 col-6">
+
+		</div>
+	</div>
+</div>
+
+<footer class="docs-footer container grid-lg">
+	2020-2025 @huzisato
+</footer>
 </body>
 </html>
