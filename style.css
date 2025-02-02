@@ -49,44 +49,6 @@ footer{
     background: #333;
     color:#ffffff;
 }
-/*カード用スタイル*/
-/* カード全体 */
-.mini-card {
-    display:flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    padding: 5px;
-    text-decoration: none;
-    background-color: #f9f9f9;
-    margin: 5px auto;
-    font-size:0.8em;
-  }
-.mini-card a:hover{
-    text-decoration: none;
+.card {
+    margin-bottom:10px;
 }
-.mini-card img {
-    all:initial;
-    display:inline-block;
-    width: 50px;
-    height:50px;
-  }
-  .mini-card span {
-    all:initial;
-    display:inline-block;
-    font-size:50px;
-    width: 50px;
-  }
-  
-  /* テキスト部分 */
-  .mini-card p {
-    all:initial;
-    display:inline-block;
-    margin-left: 10px;
-    color: #333;
-    font-size: 1.0em;
-  }
-  .mini-card p::first-line {
-    font-size: 1.1em;
-    font-weight:700;
-  }
