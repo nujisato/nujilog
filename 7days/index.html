@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>文字変換ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>文字変換ツール</h1>
+<h2>変換ルール</h2>
+	<ul>
+		<li>単語の文字数分、前にシフトする</li>
+		<li>Zをまたぐ場合は＋1</li>
+	</ul>
+<div id="keyboard"></div>
+
+<h2>入力</h2>
+<div id="inputArea"></div>
+
+<div class="buttons">
+    <button id="deleteBtn">←削除</button>
+    <button id="clearBtn">クリア</button>
+    <button id="convertBtn">変換</button>
+</div>
+
+<h2>文字数</h2>
+<div id="length">0</div>
+
+<h2>結果</h2>
+<div id="result"></div>
+<h2>シフト候補一覧</h2>
+<div id="allResults"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
